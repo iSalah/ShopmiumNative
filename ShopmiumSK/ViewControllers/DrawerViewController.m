@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self.navigationItem setHidesBackButton:YES];
+    
+    UIImage *shopmiumLogo = [UIImage imageNamed:@"shopmium_logo"];
+    UIButton *shopmiumButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    shopmiumButton.bounds = CGRectMake( 0, 0, 174, 33 );
+    [shopmiumButton setImage:shopmiumLogo forState:UIControlStateNormal];
+    UIBarButtonItem *shopmiumBarButton = [[UIBarButtonItem alloc] initWithCustomView:shopmiumButton];
+    self.navigationItem.leftBarButtonItem = shopmiumBarButton;
+    
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    self.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 }
 
 - (void)didReceiveMemoryWarning {
