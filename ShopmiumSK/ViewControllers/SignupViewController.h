@@ -10,4 +10,6 @@
 
 @interface SignupViewController : UIViewController
 
+- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
+
 @end

@@ -69,7 +69,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inscription" id="Rq5-ff-78p">
-                        <barButtonItem key="leftBarButtonItem" title="Retour" id="f4K-Sp-lRf"/>
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="f4K-Sp-lRf">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="C2m-rJ-PYB" id="yY7-sc-asI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6"/>
                     </navigationItem>
                 </viewController>
