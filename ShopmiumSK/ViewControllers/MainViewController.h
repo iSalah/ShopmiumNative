@@ -10,4 +10,6 @@
 
 @interface MainViewController : UIViewController
 
+- (IBAction)signupButtonPressed:(UIButton *)sender;
+
 @end

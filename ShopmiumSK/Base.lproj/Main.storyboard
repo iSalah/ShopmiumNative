@@ -26,6 +26,9 @@
                                 <state key="normal" title="Inscription avec mon email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DM-Ey-sqt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -72,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U83-mQ-kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="1034"/>
+            <point key="canvasLocation" x="1177" y="1102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KbH-jR-XzN">
@@ -90,7 +93,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zd-yF-98Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="1034"/>
+            <point key="canvasLocation" x="451" y="1102"/>
         </scene>
     </scenes>
     <resources>
