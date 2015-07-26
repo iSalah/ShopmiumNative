@@ -16,6 +16,8 @@
 
 @implementation SignupViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,20 +32,7 @@
     self.serverRespone = @"";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - IBAction
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -95,6 +84,8 @@
     }
 }
 
+#pragma mark - Segue
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"drawer_segue"]) {
         DrawerViewController *destinationViewController = (DrawerViewController *)segue.destinationViewController;
@@ -111,6 +102,8 @@
         [destinationViewController setLeftDrawerViewController: drawerLeftViewController];
     }
 }
+
+#pragma mark - SignupValidation
 
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
