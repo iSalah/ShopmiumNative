@@ -10,6 +10,8 @@
 
 @interface MainViewController : UIViewController
 
+@property (nonatomic, assign) BOOL firstTimeViewAppears;
+
 - (IBAction)signupButtonPressed:(UIButton *)sender;
 
 @end

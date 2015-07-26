@@ -96,7 +96,7 @@
         <!--Drawer View Controller-->
         <scene sceneID="AJo-MA-s35">
             <objects>
-                <viewController id="V1W-RC-Srg" customClass="DrawerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="drawer_screen" id="V1W-RC-Srg" customClass="DrawerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dkR-XD-3uD"/>
                         <viewControllerLayoutGuide type="bottom" id="jFg-hV-3f1"/>
