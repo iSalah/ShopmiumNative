@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="shopmium_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-kd-FhP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shopmium_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-kd-FhP">
                                 <rect key="frame" x="155" y="267" width="290" height="65"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-aM-Neo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-aM-Neo">
                                 <rect key="frame" x="208" y="340" width="184" height="30"/>
                                 <state key="normal" title="Inscription avec mon email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,7 +33,6 @@
                             <constraint firstAttribute="centerY" secondItem="qyS-kd-FhP" secondAttribute="centerY" constant="0.5" id="EES-fz-Qcv"/>
                             <constraint firstAttribute="centerY" secondItem="Dwp-aM-Neo" secondAttribute="centerY" constant="-55" id="Fee-lv-RLL"/>
                             <constraint firstAttribute="centerX" secondItem="qyS-kd-FhP" secondAttribute="centerX" id="dXv-we-K96"/>
-                            <constraint firstItem="Dwp-aM-Neo" firstAttribute="top" secondItem="qyS-kd-FhP" secondAttribute="bottom" constant="8" id="vMr-Qp-irZ"/>
                         </constraints>
                     </view>
                 </viewController>
