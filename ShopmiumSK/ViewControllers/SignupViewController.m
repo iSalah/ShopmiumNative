@@ -54,6 +54,60 @@
     }
 }
 
+- (IBAction)signupButtonPressed:(UIBarButtonItem *)sender {
+    NSString *email = self.emailField.text;
+    if ([self validateEmail:email]) {
+        // Initialize post data
+        NSDictionary *user = [[NSDictionary alloc] initWithObjectsAndKeys:email, @"email", nil];
+        NSString *device = @"{\"app_platform\":\"3\"}";
+        NSDictionary *post = [[NSDictionary alloc] initWithObjectsAndKeys:
+                              user, @"user",
+                              device, @"device",
+                              nil];
+        NSError *error;
+        NSData *postData = [NSJSONSerialization dataWithJSONObject:post options:0 error:&error];
+        
+        // Initialize request
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:@"https://app-staging.shopmium.com/mobileapp/v39/user"]];
+        [request setHTTPMethod:@"POST"];
+        
+        // Set headers
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        
+        // Set body
+        [request setHTTPBody:postData];
+        
+        // Send request
+        //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+         {
+             if (data.length > 0 && connectionError == nil)
+             {
+                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                 NSInteger statusCode = [httpResponse statusCode];
+                 NSLog(@"Status code: %ld", (long)[httpResponse statusCode]);
+                 if (statusCode == 201) {
+                 }
+                 else if (statusCode == 422) {
+                     NSString *msg = @"L'adresse email a déjà été utilisée";
+                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                     [alert show];
+                 }
+                 else {
+                     NSString *msg = @"Une erreur est survenue, veuillez réessayer.";
+                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                     [alert show];
+                 }
+             }
+         }];
+    }
+    else {
+        [self notifyInvalidEmail];
+    }
+}
 
 - (BOOL) validateEmail: (NSString *) candidate {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";

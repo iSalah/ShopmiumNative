@@ -77,7 +77,11 @@
                                 <action selector="cancelButtonPressed:" destination="C2m-rJ-PYB" id="yY7-sc-asI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6">
+                            <connections>
+                                <action selector="signupButtonPressed:" destination="C2m-rJ-PYB" id="UY3-RW-EkO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="GYV-tJ-adV" id="Act-co-s7v"/>

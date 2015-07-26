@@ -15,5 +15,6 @@
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)emailFieldChanged:(UITextField *)sender;
+- (IBAction)signupButtonPressed:(UIBarButtonItem *)sender;
 
 @end
