@@ -83,31 +83,11 @@
         [request setHTTPBody:postData];
         
         // Send request
-        //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
          {
-             if (data.length > 0 && connectionError == nil)
-             {
-                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-                 NSInteger statusCode = [httpResponse statusCode];
-                 NSLog(@"Status code: %ld", (long)[httpResponse statusCode]);
-                 if (statusCode == 201) {
-                     self.serverRespone = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                     [self performSegueWithIdentifier:@"drawer_segue" sender:self];
-                 }
-                 else if (statusCode == 422) {
-                     NSString *msg = @"L'adresse email a déjà été utilisée";
-                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-                     [alert show];
-                 }
-                 else {
-                     NSString *msg = @"Une erreur est survenue, veuillez réessayer.";
-                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-                     [alert show];
-                 }
-             }
+             [self handleSignupResponse:response data:data connectionError:connectionError email:email];
          }];
     }
     else {
@@ -154,4 +134,42 @@
     [emailIcon setTintColor:[UIColor greenColor]];
     [self.signupButton setEnabled:YES];
 }
+
+- (void) performSuccessAuthentication: (NSString *)email data:(NSData *)data {
+    self.serverRespone = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [self performSegueWithIdentifier:@"drawer_segue" sender:self];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:email forKey:@"email"];
+    [prefs synchronize];
+}
+
+- (void) performFailureAuthentication: (NSString *)errorMessage {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:errorMessage delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+-(void) handleSignupResponse: (NSURLResponse *)response data:(NSData*)data connectionError:(NSError*)connectionError email:(NSString *)email
+{
+    if (data.length > 0 && connectionError == nil)
+    {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        NSInteger statusCode = [httpResponse statusCode];
+        NSLog(@"Status code: %ld", (long)[httpResponse statusCode]);
+        if (statusCode == 201) {
+            [self performSuccessAuthentication:email data:data];
+        }
+        else if (statusCode == 422) {
+            [self performFailureAuthentication:@"L'adresse email a déjà été utilisée"];
+        }
+        else {
+            [self performFailureAuthentication:@"Une erreur est survenue, veuillez réessayer."];
+        }
+    }
+    else {
+        [self performFailureAuthentication:@"Une erreur est survenue, veuillez réessayer."];
+    }
+}
+
+
+
 @end
