@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -38,6 +39,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Inscription-->
+        <scene sceneID="VVL-td-UFe">
+            <objects>
+                <viewController id="C2m-rJ-PYB" customClass="SignupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qkj-HP-2T5"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTa-wW-dUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ht4-NN-QBb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir votre adresse email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-tJ-adV">
+                                <rect key="frame" x="178" y="285" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="GYV-tJ-adV" secondAttribute="centerY" id="B1D-8f-Ltg"/>
+                            <constraint firstItem="GYV-tJ-adV" firstAttribute="width" secondItem="Ht4-NN-QBb" secondAttribute="height" multiplier="49:120" id="Fft-JJ-NdE"/>
+                            <constraint firstAttribute="centerX" secondItem="GYV-tJ-adV" secondAttribute="centerX" constant="-0.5" id="whh-ST-81l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inscription" id="Rq5-ff-78p">
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="f4K-Sp-lRf"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U83-mQ-kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="1034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KbH-jR-XzN">
+            <objects>
+                <navigationController storyboardIdentifier="navigation_screen" automaticallyAdjustsScrollViewInsets="NO" id="mLd-xx-rY8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jgu-gd-O7A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C2m-rJ-PYB" kind="relationship" relationship="rootViewController" id="d77-Bw-uv1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zd-yF-98Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="1034"/>
         </scene>
     </scenes>
     <resources>
