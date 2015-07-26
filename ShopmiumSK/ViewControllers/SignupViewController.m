@@ -7,6 +7,7 @@
 //
 
 #import "SignupViewController.h"
+#import "DrawerViewController.h"
 
 @interface SignupViewController ()
 
@@ -90,6 +91,7 @@
                  NSInteger statusCode = [httpResponse statusCode];
                  NSLog(@"Status code: %ld", (long)[httpResponse statusCode]);
                  if (statusCode == 201) {
+                     [self performSegueWithIdentifier:@"drawer_segue" sender:self];
                  }
                  else if (statusCode == 422) {
                      NSString *msg = @"L'adresse email a déjà été utilisée";
@@ -106,6 +108,20 @@
     }
     else {
         [self notifyInvalidEmail];
+    }
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"drawer_segue"]) {
+        DrawerViewController *destinationViewController = (DrawerViewController *)segue.destinationViewController;
+        
+        // Instantitate and set the center view controller.
+        UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"home_screen"];
+        [destinationViewController setCenterViewController: homeViewController];
+        
+        // Instantiate and set the left drawer controller.
+        UIViewController *drawerLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"drawer_left_screen"];
+        [destinationViewController setLeftDrawerViewController: drawerLeftViewController];
     }
 }
 
