@@ -86,11 +86,91 @@
                     <connections>
                         <outlet property="emailField" destination="GYV-tJ-adV" id="Act-co-s7v"/>
                         <outlet property="signupButton" destination="UL6-3P-Mc6" id="KSw-Jv-6eh"/>
+                        <segue destination="V1W-RC-Srg" kind="custom" identifier="drawer_segue" id="RmI-Gy-6ul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U83-mQ-kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1177" y="1102"/>
+        </scene>
+        <!--Drawer View Controller-->
+        <scene sceneID="AJo-MA-s35">
+            <objects>
+                <viewController id="V1W-RC-Srg" customClass="DrawerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dkR-XD-3uD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFg-hV-3f1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eh2-ea-gWT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biX-qN-sMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="1102"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="3bt-jv-aVz">
+            <objects>
+                <viewController storyboardIdentifier="home_screen" id="cAS-TR-k7X" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rUH-SF-wrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2C-hA-ri9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ig0-fa-BGe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Td-BA-aL1">
+                                <rect key="frame" x="54" y="170" width="493" height="238"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9Td-BA-aL1" secondAttribute="centerX" constant="-0.5" id="6sP-Yk-XkL"/>
+                            <constraint firstAttribute="width" secondItem="9Td-BA-aL1" secondAttribute="width" id="TwA-Ij-93c"/>
+                            <constraint firstAttribute="centerY" secondItem="9Td-BA-aL1" secondAttribute="centerY" constant="11" id="eeX-Jj-Tb8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="9Td-BA-aL1" id="Gn6-ND-dJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AjS-wv-nX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="1824"/>
+        </scene>
+        <!--Drawer Left View Controller-->
+        <scene sceneID="h4W-3n-UU2">
+            <objects>
+                <tableViewController storyboardIdentifier="drawer_left_screen" id="bJE-1L-vDs" customClass="DrawerLeftViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzp-Pc-ETU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6nE-gn-g0q">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6nE-gn-g0q" id="ZrC-qe-iDv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bJE-1L-vDs" id="CiT-BZ-8Jq"/>
+                            <outlet property="delegate" destination="bJE-1L-vDs" id="thn-js-8ji"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUb-TL-WBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="1102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KbH-jR-XzN">

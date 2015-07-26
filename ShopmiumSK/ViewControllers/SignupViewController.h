@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *signupButton;
 
+@property (strong, nonatomic) NSString *serverRespone;
+
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)emailFieldChanged:(UITextField *)sender;
 - (IBAction)signupButtonPressed:(UIBarButtonItem *)sender;
