@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shopmium_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-kd-FhP">
+                                <rect key="frame" x="155" y="267" width="290" height="65"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-aM-Neo">
+                                <rect key="frame" x="208" y="340" width="184" height="30"/>
+                                <state key="normal" title="Inscription avec mon email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Dwp-aM-Neo" secondAttribute="centerX" id="Afx-DF-bjU"/>
+                            <constraint firstAttribute="centerY" secondItem="qyS-kd-FhP" secondAttribute="centerY" constant="0.5" id="EES-fz-Qcv"/>
+                            <constraint firstAttribute="centerY" secondItem="Dwp-aM-Neo" secondAttribute="centerY" constant="-55" id="Fee-lv-RLL"/>
+                            <constraint firstAttribute="centerX" secondItem="qyS-kd-FhP" secondAttribute="centerX" id="dXv-we-K96"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="shopmium_logo" width="580" height="110"/>
+    </resources>
 </document>

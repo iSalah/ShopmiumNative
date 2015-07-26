@@ -13,6 +13,7 @@
 		842A0D8D1B64D61700D55C5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842A0D8C1B64D61700D55C5B /* Images.xcassets */; };
 		842A0D901B64D61700D55C5B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A0D8E1B64D61700D55C5B /* LaunchScreen.xib */; };
 		842A0D9C1B64D61700D55C5B /* ShopmiumSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A0D9B1B64D61700D55C5B /* ShopmiumSKTests.m */; };
+		842A0DAD1B64E4CC00D55C5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A0DAC1B64E4CC00D55C5B /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,8 @@
 		842A0D951B64D61700D55C5B /* ShopmiumSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopmiumSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A0D9A1B64D61700D55C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842A0D9B1B64D61700D55C5B /* ShopmiumSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopmiumSKTests.m; sourceTree = "<group>"; };
+		842A0DAB1B64E4CC00D55C5B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		842A0DAC1B64E4CC00D55C5B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 		842A0DA51B64D7D800D55C5B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				842A0DAB1B64E4CC00D55C5B /* MainViewController.h */,
+				842A0DAC1B64E4CC00D55C5B /* MainViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842A0D851B64D61700D55C5B /* AppDelegate.m in Sources */,
+				842A0DAD1B64E4CC00D55C5B /* MainViewController.m in Sources */,
 				842A0D821B64D61700D55C5B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
