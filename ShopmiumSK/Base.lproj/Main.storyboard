@@ -141,16 +141,16 @@
             </objects>
             <point key="canvasLocation" x="1893" y="1824"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Drawer Left View Controller-->
         <scene sceneID="h4W-3n-UU2">
             <objects>
-                <tableViewController storyboardIdentifier="drawer_left_screen" id="bJE-1L-vDs" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="drawer_left_screen" id="bJE-1L-vDs" customClass="DrawerLeftViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzp-Pc-ETU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6nE-gn-g0q">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6nE-gn-g0q">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6nE-gn-g0q" id="ZrC-qe-iDv">
                                     <autoresizingMask key="autoresizingMask"/>
