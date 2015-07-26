@@ -14,15 +14,13 @@
 
 @implementation DrawerLeftViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.data = [[NSArray alloc] initWithObjects:@"Offres", @"Magasins", @"Avis", @"Parrainer un ami",  @"Mes achats",  @"Déconnexion", @"Aide", nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Init menu labels
+    self.data = [[NSArray alloc] initWithObjects:NSLocalizedString(@"Offers", @"Menu"), NSLocalizedString(@"Stores", @"Menu"), NSLocalizedString(@"Opinion", @"Menu"), NSLocalizedString(@"Sponsor a friend", @"Menu"),  NSLocalizedString(@"My purchases", @"Menu"),  NSLocalizedString(@"Logout", @"Menu"), NSLocalizedString(@"Help", @"Menu"), nil];
 }
 
 #pragma mark - Table view data source
