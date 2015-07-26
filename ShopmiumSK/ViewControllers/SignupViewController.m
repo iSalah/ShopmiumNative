@@ -8,6 +8,7 @@
 
 #import "SignupViewController.h"
 #import "DrawerViewController.h"
+#import "HomeViewController.h"
 
 @interface SignupViewController ()
 
@@ -25,6 +26,8 @@
     
     [self.emailField setLeftViewMode:UITextFieldViewModeAlways];
     [self.emailField setLeftView:emailIcon];
+    
+    self.serverRespone = @"";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +94,7 @@
                  NSInteger statusCode = [httpResponse statusCode];
                  NSLog(@"Status code: %ld", (long)[httpResponse statusCode]);
                  if (statusCode == 201) {
+                     self.serverRespone = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                      [self performSegueWithIdentifier:@"drawer_segue" sender:self];
                  }
                  else if (statusCode == 422) {
@@ -116,7 +120,10 @@
         DrawerViewController *destinationViewController = (DrawerViewController *)segue.destinationViewController;
         
         // Instantitate and set the center view controller.
-        UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"home_screen"];
+        HomeViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"home_screen"];
+        [homeViewController view];
+        NSLog(@"%@", self.serverRespone);
+        homeViewController.textView.text = self.serverRespone;
         [destinationViewController setCenterViewController: homeViewController];
         
         // Instantiate and set the left drawer controller.

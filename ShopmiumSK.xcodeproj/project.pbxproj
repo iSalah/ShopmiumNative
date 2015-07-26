@@ -17,6 +17,7 @@
 		842A0DB01B64ED1800D55C5B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A0DAF1B64ED1800D55C5B /* SignupViewController.m */; };
 		8463CA9C1B650F8D00851C10 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CA9B1B650F8D00851C10 /* DrawerViewController.m */; };
 		8463CA9F1B6513C800851C10 /* DrawerLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CA9E1B6513C800851C10 /* DrawerLeftViewController.m */; };
+		8463CAA21B65229C00851C10 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CAA11B65229C00851C10 /* HomeViewController.m */; };
 		EF9E89C97CE1084E0EB7222D /* libPods-ShopmiumSK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7D718580F0C41BDB13D2AB /* libPods-ShopmiumSK.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		8463CA9B1B650F8D00851C10 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
 		8463CA9D1B6513C800851C10 /* DrawerLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerLeftViewController.h; sourceTree = "<group>"; };
 		8463CA9E1B6513C800851C10 /* DrawerLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerLeftViewController.m; sourceTree = "<group>"; };
+		8463CAA01B65229C00851C10 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8463CAA11B65229C00851C10 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E6346CC5828EC26DE43F12C0 /* Pods-ShopmiumSK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.release.xcconfig"; sourceTree = "<group>"; };
 		F60D36720A176F3191BA194E /* Pods-ShopmiumSK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,8 @@
 				8463CA9B1B650F8D00851C10 /* DrawerViewController.m */,
 				8463CA9D1B6513C800851C10 /* DrawerLeftViewController.h */,
 				8463CA9E1B6513C800851C10 /* DrawerLeftViewController.m */,
+				8463CAA01B65229C00851C10 /* HomeViewController.h */,
+				8463CAA11B65229C00851C10 /* HomeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				8463CA9F1B6513C800851C10 /* DrawerLeftViewController.m in Sources */,
 				842A0DB01B64ED1800D55C5B /* SignupViewController.m in Sources */,
 				8463CA9C1B650F8D00851C10 /* DrawerViewController.m in Sources */,
+				8463CAA21B65229C00851C10 /* HomeViewController.m in Sources */,
 				842A0D821B64D61700D55C5B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
