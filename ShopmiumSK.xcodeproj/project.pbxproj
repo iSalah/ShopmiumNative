@@ -54,6 +54,8 @@
 		8463CA9E1B6513C800851C10 /* DrawerLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerLeftViewController.m; sourceTree = "<group>"; };
 		8463CAA01B65229C00851C10 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8463CAA11B65229C00851C10 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8463CAA31B65650300851C10 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8463CAA41B65650300851C10 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E6346CC5828EC26DE43F12C0 /* Pods-ShopmiumSK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.release.xcconfig"; sourceTree = "<group>"; };
 		F60D36720A176F3191BA194E /* Pods-ShopmiumSK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,6 +254,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 842A0D731B64D61700D55C5B;
 			productRefGroup = 842A0D7D1B64D61700D55C5B /* Products */;
@@ -355,6 +358,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				842A0D8A1B64D61700D55C5B /* Base */,
+				8463CAA31B65650300851C10 /* fr */,
 			);
 			name = Main.storyboard;
 			path = ..;
@@ -364,6 +368,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				842A0D8F1B64D61700D55C5B /* Base */,
+				8463CAA41B65650300851C10 /* fr */,
 			);
 			name = LaunchScreen.xib;
 			path = ..;

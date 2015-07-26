@@ -137,7 +137,7 @@
 }
 
 - (void) performFailureAuthentication: (NSString *)errorMessage {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:errorMessage delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Erreur", nil) message:errorMessage delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
     [alert show];
 }
 
@@ -152,14 +152,14 @@
             [self performSuccessAuthentication:email data:data];
         }
         else if (statusCode == 422) {
-            [self performFailureAuthentication:@"L'adresse email a déjà été utilisée"];
+            [self performFailureAuthentication:NSLocalizedString(@"The email address has already been used.", nil)];
         }
         else {
-            [self performFailureAuthentication:@"Une erreur est survenue, veuillez réessayer."];
+            [self performFailureAuthentication:NSLocalizedString(@"An error has occured, please try again.", nil)];
         }
     }
     else {
-        [self performFailureAuthentication:@"Une erreur est survenue, veuillez réessayer."];
+        [self performFailureAuthentication:NSLocalizedString(@"An error has occured, please try again.", nil)];
     }
 }
 

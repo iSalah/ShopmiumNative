@@ -43,7 +43,7 @@
             // Instantitate and set the center view controller.
             HomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"home_screen"];
             [homeViewController view];
-            homeViewController.textView.text = [NSString stringWithFormat:@"Login automatique (%@)", email];
+            homeViewController.textView.text = [NSString stringWithFormat:NSLocalizedString(@"Auto login (%@)", @"Email as parameter"), email];
             [drawerViewController setCenterViewController: homeViewController];
         
             // Instantiate and set the left drawer controller.
