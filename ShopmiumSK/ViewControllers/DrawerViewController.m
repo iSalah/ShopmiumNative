@@ -25,11 +25,7 @@
     [shopmiumButton setImage:shopmiumLogo forState:UIControlStateNormal];
     UIBarButtonItem *shopmiumBarButton = [[UIBarButtonItem alloc] initWithCustomView:shopmiumButton];
     self.navigationItem.leftBarButtonItem = shopmiumBarButton;
-    
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
-    
+
     self.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 }
