@@ -10,6 +10,10 @@
 
 @interface SignupViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *emailField;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *signupButton;
+
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
+- (IBAction)emailFieldChanged:(UITextField *)sender;
 
 @end

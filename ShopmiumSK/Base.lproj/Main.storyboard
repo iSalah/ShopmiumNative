@@ -59,6 +59,9 @@
                                 <rect key="frame" x="178" y="285" width="245" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailFieldChanged:" destination="C2m-rJ-PYB" eventType="editingChanged" id="Jr4-x2-WQA"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,6 +79,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="GYV-tJ-adV" id="Act-co-s7v"/>
+                        <outlet property="signupButton" destination="UL6-3P-Mc6" id="KSw-Jv-6eh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U83-mQ-kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
