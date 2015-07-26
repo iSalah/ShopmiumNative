@@ -18,6 +18,7 @@
 		8463CA9C1B650F8D00851C10 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CA9B1B650F8D00851C10 /* DrawerViewController.m */; };
 		8463CA9F1B6513C800851C10 /* DrawerLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CA9E1B6513C800851C10 /* DrawerLeftViewController.m */; };
 		8463CAA21B65229C00851C10 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463CAA11B65229C00851C10 /* HomeViewController.m */; };
+		8463CAA91B656C1600851C10 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8463CAA71B656C1600851C10 /* Localizable.strings */; };
 		EF9E89C97CE1084E0EB7222D /* libPods-ShopmiumSK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7D718580F0C41BDB13D2AB /* libPods-ShopmiumSK.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		8463CAA11B65229C00851C10 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8463CAA31B65650300851C10 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8463CAA41B65650300851C10 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8463CAA81B656C1600851C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8463CAAA1B656C6400851C10 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E6346CC5828EC26DE43F12C0 /* Pods-ShopmiumSK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.release.xcconfig"; sourceTree = "<group>"; };
 		F60D36720A176F3191BA194E /* Pods-ShopmiumSK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopmiumSK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopmiumSK/Pods-ShopmiumSK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +114,7 @@
 		842A0D7E1B64D61700D55C5B /* ShopmiumSK */ = {
 			isa = PBXGroup;
 			children = (
+				8463CAA61B656BFF00851C10 /* Localization */,
 				842A0DA71B64D81500D55C5B /* Views */,
 				842A0DA61B64D80300D55C5B /* App */,
 				842A0DA51B64D7D800D55C5B /* ViewControllers */,
@@ -179,6 +183,14 @@
 				842A0D8E1B64D61700D55C5B /* LaunchScreen.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8463CAA61B656BFF00851C10 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8463CAA71B656C1600851C10 /* Localizable.strings */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 		F51777B0EDC7C8C5A8784794 /* Frameworks */ = {
@@ -273,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842A0D8B1B64D61700D55C5B /* Main.storyboard in Resources */,
+				8463CAA91B656C1600851C10 /* Localizable.strings in Resources */,
 				842A0D901B64D61700D55C5B /* LaunchScreen.xib in Resources */,
 				842A0D8D1B64D61700D55C5B /* Images.xcassets in Resources */,
 			);
@@ -372,6 +385,15 @@
 			);
 			name = LaunchScreen.xib;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8463CAA71B656C1600851C10 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8463CAA81B656C1600851C10 /* Base */,
+				8463CAAA1B656C6400851C10 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
