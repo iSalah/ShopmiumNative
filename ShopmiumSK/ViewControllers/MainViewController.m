@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)signupButtonPressed:(UIButton *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *navigationScreen = [storyboard instantiateViewControllerWithIdentifier:@"navigation_screen"];
+    [self presentViewController:navigationScreen animated:YES completion:nil];
+}
 @end

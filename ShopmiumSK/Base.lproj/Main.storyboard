@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -25,6 +26,9 @@
                                 <state key="normal" title="Inscription avec mon email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DM-Ey-sqt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -38,6 +42,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Inscription-->
+        <scene sceneID="VVL-td-UFe">
+            <objects>
+                <viewController id="C2m-rJ-PYB" customClass="SignupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qkj-HP-2T5"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTa-wW-dUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ht4-NN-QBb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir votre adresse email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-tJ-adV">
+                                <rect key="frame" x="178" y="285" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailFieldChanged:" destination="C2m-rJ-PYB" eventType="editingChanged" id="Jr4-x2-WQA"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="GYV-tJ-adV" secondAttribute="centerY" id="B1D-8f-Ltg"/>
+                            <constraint firstItem="GYV-tJ-adV" firstAttribute="width" secondItem="Ht4-NN-QBb" secondAttribute="height" multiplier="49:120" id="Fft-JJ-NdE"/>
+                            <constraint firstAttribute="centerX" secondItem="GYV-tJ-adV" secondAttribute="centerX" constant="-0.5" id="whh-ST-81l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inscription" id="Rq5-ff-78p">
+                        <barButtonItem key="leftBarButtonItem" title="Retour" id="f4K-Sp-lRf">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="C2m-rJ-PYB" id="yY7-sc-asI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Enregistrer" id="UL6-3P-Mc6">
+                            <connections>
+                                <action selector="signupButtonPressed:" destination="C2m-rJ-PYB" id="UY3-RW-EkO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="GYV-tJ-adV" id="Act-co-s7v"/>
+                        <outlet property="signupButton" destination="UL6-3P-Mc6" id="KSw-Jv-6eh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U83-mQ-kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="1102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KbH-jR-XzN">
+            <objects>
+                <navigationController storyboardIdentifier="navigation_screen" automaticallyAdjustsScrollViewInsets="NO" id="mLd-xx-rY8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jgu-gd-O7A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C2m-rJ-PYB" kind="relationship" relationship="rootViewController" id="d77-Bw-uv1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zd-yF-98Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="1102"/>
         </scene>
     </scenes>
     <resources>
